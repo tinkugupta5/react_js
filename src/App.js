@@ -1,12 +1,19 @@
-import './App.css';
+import React from 'react'
+import { FormInput } from './components/FormInput'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-     <h1>Form example</h1>
-     <h1>Form example</h1>
+    <div className='app'>
+
+      <form>
+    <FormInput placeholder="Username"/>
+    <FormInput placeholder="Email"/>
+    <FormInput placeholder="Full Name" />
+    <FormInput placeholder="Sth else"/>
+      </form>
+      
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
