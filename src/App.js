@@ -1,18 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FormInput } from './components/FormInput'
 
-const App = () => {
-  return (
-    <div className='app'>
 
+const App = () => {
+
+
+  const [username,setUsername] = useState("");
+
+
+  return (
+    
+    <div className='app'>
       <form>
-    <FormInput placeholder="Username"/>
+    <FormInput placeholder="Username" setUsername={setUsername}/>
     <FormInput placeholder="Email"/>
     <FormInput placeholder="Full Name" />
     <FormInput placeholder="Sth else"/>
       </form>
-      
-    </div>
+      </div>
   )
 }
 
