@@ -6,18 +6,26 @@ const App = () => {
 
 
   // const [username,setUsername] = useState("");
-  const usernameRef = useRef()
-  console.log(usernameRef);
+
+
+
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    const data = new FormData(e.target)
+    console.log(data)
+
+  }
 
 
   return (
     
     <div className='app'>
-      <form>
-    <FormInput refer= placeholder="Username" setUsername={setUsername}/>
-    <FormInput placeholder="Email"/>
-    <FormInput placeholder="Full Name" />
-    <FormInput placeholder="Sth else"/>
+      <form onSubmit={handleSubmit}>
+    <FormInput name="username" placeholder="Username" setUsername={setUsername}/>
+    <FormInput name="email" placeholder="Email"/>
+    <FormInput name="fullname" placeholder="Full Name" />
+    <FormInput name="sth" placeholder="Sth else"/>
+    <button>Submit</button> 
       </form>
       </div>
   )
