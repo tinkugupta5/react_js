@@ -6,6 +6,14 @@ const App = () => {
 
 
   // const [username,setUsername] = useState("");
+  const [values,setValues] = useState({
+
+    username:"",
+    email:"",
+    birthday:"",
+    password:"",
+    confirmPassword:"", 
+  });
 
 
 
@@ -20,7 +28,7 @@ const App = () => {
   return (
     
     <div className='app'>
-      <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
     <FormInput name="username" placeholder="Username" setUsername={setUsername}/>
     <FormInput name="email" placeholder="Email"/>
     <FormInput name="fullname" placeholder="Full Name" />
