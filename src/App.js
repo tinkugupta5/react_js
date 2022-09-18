@@ -1,9 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { FormInput } from './components/FormInput'
 
-
 const App = () => {
-
 
   // const [username,setUsername] = useState("");
   const [values,setValues] = useState({
